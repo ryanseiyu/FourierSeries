@@ -5,17 +5,15 @@
  * Demonstration of the Fourier Series by The Coding Train Youtube Channel using Java.
  * 
  */
-import java.util.Scanner;
 
 float time = 0;
-//FloatList wave;
-ArrayList<Float> wave;
+ArrayList<Float> wave; //ArrayList declaration.
 
 
 
 void setup() {
   size(600,400);
-  wave = new ArrayList<Float>();
+  wave = new ArrayList<Float>(); //Object creation with Float parameter.
 }
 
 void draw() {
@@ -23,16 +21,15 @@ void draw() {
   translate(150,200);
   float a = 0;
   float b = 0;
-  //Scanner keyboard = new Scanner(System.in);
-  //System.out.println("Enter an integer");
-  //int myint = keyboard.nextInt();
+  
+  //Creation of Cos and Sin waves as functions of time.
   for (int i = 0 ; i < 200 ; i++){
     float preva = a;
     float prevb = b;
     int n = i * 2 + 1;
     float radius = 100 * (4 / (n * PI));
     a += radius * cos(n * time);
-    b += + radius * sin(n * time);   
+    b += radius * sin(n * time);   
     stroke (255);
     noFill();
     ellipse(preva , prevb , radius*2 , radius*2);
@@ -42,11 +39,11 @@ void draw() {
   
   translate(200,0);
   
-  //println(wave.size());
-  wave.add(b);
-  line(a - 200 , b ,0 , wave.get(0));
+  wave.add(b); //Adding element b = radius * cos(n * time);
+  line(a - 200 , b ,0 , wave.get(0)); //Line connecting to the tiniest circle of the Fourier Series.
   
-  beginShape();
+  //Drawing of the Fourier Series.
+  beginShape(); 
   noFill();
   for(int z = 0 ; z < wave.size() ; z++){
     vertex(z , wave.get(z));
@@ -54,6 +51,8 @@ void draw() {
   endShape();
   
   time += 0.05;
+  
+  //Reseting the Fourier Series drawing.
   if (wave.size()>250){
     wave.clear();
   }  
