@@ -1,8 +1,9 @@
 # FourierSeries
-Demonstration of the Fourier Series by The Coding Train YouTube Channel using Java with Processing.
+Demonstration of the Fourier Series by The Coding Train YouTube Channel using Java with Processing. Slider by Alin Zhang.
 
 ## Links
 [Vídeo no YouTube](https://www.youtube.com/watch?v=Mm2eYfj0SgA&ab_channel=TheCodingTrain)
+[Slider link](https://openprocessing.org/sketch/1689253)
 
 ### Images
 #### Function $\Huge4sin(\theta)\over\Huge(\pi)$
